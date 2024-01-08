@@ -1,0 +1,14 @@
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\bin\Debug\net7.0\Day 1.exe
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\bin\Debug\net7.0\Day 1.deps.json
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\bin\Debug\net7.0\Day 1.runtimeconfig.json
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\bin\Debug\net7.0\Day 1.dll
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\bin\Debug\net7.0\Day 1.pdb
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.GeneratedMSBuildEditorConfig.editorconfig
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.AssemblyInfoInputs.cache
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.AssemblyInfo.cs
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.csproj.CoreCompileInputs.cache
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.dll
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\refint\Day 1.dll
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.pdb
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\Day 1.genruntimeconfig.cache
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 1\Day 1\obj\Debug\net7.0\ref\Day 1.dll

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITIExaminationSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="courses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="max_degree" Type="Double" Nullable="false" />
+    <Property Name="min_degree" Type="Double" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="instructors" Relationship="Self.instructor_courses" FromRole="courses" ToRole="instructors" />
+  </EntityType>
+  <EntityType Name="instructors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="courses" Relationship="Self.instructor_courses" FromRole="instructors" ToRole="courses" />
+  </EntityType>
+  <Association Name="instructor_courses">
+    <End Role="courses" Type="ITIExaminationSystemModel.courses" Multiplicity="*" />
+    <End Role="instructors" Type="ITIExaminationSystemModel.instructors" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ITIExaminationSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="courses" EntityType="ITIExaminationSystemModel.courses" />
+    <EntitySet Name="instructors" EntityType="ITIExaminationSystemModel.instructors" />
+    <AssociationSet Name="instructor_courses" Association="Self.instructor_courses">
+      <End Role="courses" EntitySet="courses" />
+      <End Role="instructors" EntitySet="instructors" />
+    </AssociationSet>
+    <FunctionImport Name="usp_addtrack">
+      <Parameter Name="trackName" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

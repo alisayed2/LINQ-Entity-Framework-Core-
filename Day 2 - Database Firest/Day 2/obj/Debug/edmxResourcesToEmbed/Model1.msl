@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ITIExaminationSystemModelStoreContainer" CdmEntityContainer="ITIExaminationSystemEntities">
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="ITIExaminationSystemModel.courses">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="max_degree" ColumnName="max_degree" />
+          <ScalarProperty Name="min_degree" ColumnName="min_degree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instructors">
+      <EntityTypeMapping TypeName="ITIExaminationSystemModel.instructors">
+        <MappingFragment StoreEntitySet="instructors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="instructor_courses" TypeName="ITIExaminationSystemModel.instructor_courses" StoreEntitySet="instructor_courses">
+      <EndProperty Name="courses">
+        <ScalarProperty Name="id" ColumnName="course_id" />
+      </EndProperty>
+      <EndProperty Name="instructors">
+        <ScalarProperty Name="id" ColumnName="instructor_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="usp_addtrack" FunctionName="ITIExaminationSystemModel.Store.usp_addtrack" />
+  </EntityContainerMapping>
+</Mapping>

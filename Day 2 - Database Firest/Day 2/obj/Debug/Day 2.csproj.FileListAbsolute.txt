@@ -1,0 +1,12 @@
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\Day 2.exe.config
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\Day 2.exe
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\Day 2.pdb
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\obj\Debug\Day 2.csproj.AssemblyReference.cache
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\obj\Debug\Day 2.csproj.CoreCompileInputs.cache
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\obj\Debug\Day 2.exe
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\obj\Debug\Day 2.pdb
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\EntityFramework.dll
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\EntityFramework.SqlServer.dll
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\EntityFramework.xml
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\bin\Debug\EntityFramework.SqlServer.xml
+G:\IT\ITI\.Net Track\Linq & Entity F\Assignments\Day 2\Day 2\Day 2\obj\Debug\Day 2.csproj.CopyComplete

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITIExaminationSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="courses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="max_degree" Type="float" Nullable="false" />
+    <Property Name="min_degree" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instructor_courses">
+    <Key>
+      <PropertyRef Name="instructor_id" />
+      <PropertyRef Name="course_id" />
+    </Key>
+    <Property Name="instructor_id" Type="int" Nullable="false" />
+    <Property Name="course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instructors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="last_name" Type="varchar" MaxLength="10" />
+    <Property Name="email" Type="varchar" MaxLength="30" />
+    <Property Name="password" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__instructo__cours__7C4F7684">
+    <End Role="courses" Type="Self.courses" Multiplicity="1" />
+    <End Role="instructor_courses" Type="Self.instructor_courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="courses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="instructor_courses">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__instructo__instr__7B5B524B">
+    <End Role="instructors" Type="Self.instructors" Multiplicity="1" />
+    <End Role="instructor_courses" Type="Self.instructor_courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="instructors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="instructor_courses">
+        <PropertyRef Name="instructor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_addtrack" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="trackName" Type="varchar" Mode="In" />
+    <Parameter Name="userName" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ITIExaminationSystemModelStoreContainer">
+    <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="instructor_courses" EntityType="Self.instructor_courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="instructors" EntityType="Self.instructors" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__instructo__cours__7C4F7684" Association="Self.FK__instructo__cours__7C4F7684">
+      <End Role="courses" EntitySet="courses" />
+      <End Role="instructor_courses" EntitySet="instructor_courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__instructo__instr__7B5B524B" Association="Self.FK__instructo__instr__7B5B524B">
+      <End Role="instructors" EntitySet="instructors" />
+      <End Role="instructor_courses" EntitySet="instructor_courses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
